@@ -1,3 +1,7 @@
 {
-  "recommendations": ["golang.go"]
+    "recommendations": [
+        "formulahendry.code-runner",
+        "golang.go"
+    ]
 }
+
