@@ -32,9 +32,10 @@
 
 # 后端的如下目录
 server/dist
+!.air/memos_dev.db
 
 # Air (hot reload) generated
-.air
+.air/
 
 # temp folder
 tmp

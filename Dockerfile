@@ -1,55 +1,33 @@
-# Build frontend dist.
-FROM node:latest AS frontend
-WORKDIR /frontend-build
-
-COPY ./web/package.json ./web/pnpm-lock.yaml ./
-
-RUN corepack enable && pnpm i --frozen-lockfile
-
-COPY ./web/ .
-
-# 设置淘宝npm镜像
-RUN npm config set registry https://registry.npm.taobao.org 
-# 安装pnpm
-# RUN npm install -g pnpm
-# 安装依赖
-RUN pnpm install
-
-RUN pnpm build
-
+# NOTE 构建镜像_从原始的后端镜像构建_修改而来
 # Build backend exec file.
-FROM golang:1.19.3-alpine3.16 AS backend
+FROM golang:1.19.3-alpine3.16
 WORKDIR /backend-build
 
 COPY . .
-COPY --from=frontend /frontend-build/dist ./server/dist
+
+COPY ./.air/memos_dev.db .
 
 # #构建后端和安装环境
-RUN go env -w GOPROXY=https://goproxy.cn,direct \
+RUN go env -w GOPROXY=https://goproxy.cn,https://mirrors.tencent.com/go/,https://mirrors.aliyun.com/goproxy,https://proxy.golang.com.cn,direct \
+    && go mod download -x \
     && go mod tidy
 
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories \
-    && apk update --no-cache \
-    && apk add ffmpeg  
+    && apk update --no-cache
 
 RUN CGO_ENABLED=0 go build -o memos ./main.go
 
-# Make workspace with above generated files.
-FROM alpine:3.16 AS monolithic
-WORKDIR /usr/local/memos
-
-RUN apk add --no-cache tzdata
-ENV TZ="UTC"
-
-COPY --from=backend /backend-build/memos /usr/local/memos/
-
-EXPOSE 5230
+EXPOSE 8118
 
 # Directory to store the data, which can be referenced as the mounting point.
 RUN mkdir -p /var/opt/memos
-VOLUME /var/opt/memos
+# VOLUME /var/opt/memos
 
-ENV MEMOS_MODE="prod"
-ENV MEMOS_PORT="5230"
+COPY ./.air/memos_dev.db /var/opt/memos
+
+# RUN ./memos setup --host-username=root --host-password=a123456 --mode dev
+
+ENV MEMOS_MODE="dev"
+ENV MEMOS_PORT="8118"
 
 ENTRYPOINT ["./memos"]

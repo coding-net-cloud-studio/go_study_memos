@@ -61,7 +61,23 @@ Memos is built with a curated tech stack. It is optimized for developer experien
 - 用户名称: root
 - 用户密码: a123456
 
-4. start frontend dev server
+4. 尝试构建docker镜像
+   ```bash
+   # 01_下拉构建过程中需要用的镜像
+   [[ -f workspace.yml ]] && docker pull golang:1.19.3-alpine3.16
+   # 03_尝试构建镜像
+   [[ -f workspace.yml ]] && docker build -f ./Dockerfile -t neosmemo/memos:latest .
+   # 05_尝试在上面新构建的镜像_运行一个临时容器
+   [[ -f workspace.yml ]] && docker run -it --rm --name m12_cloudstudio_memos -p 8118:8118 neosmemo/memos:latest
+   # 07_尝试停止上面运行起来的m12_cloudstudio_memos容器
+   [[ -f workspace.yml ]] && docker stop m12_cloudstudio_memos
+   # 09_尝试使用docker-compose运行起来
+   [[ -f workspace.yml ]] && docker-compose up -d 
+   # 11_尝试停止docker-compose启动容器
+   [[ -f workspace.yml ]] && docker-compose down
+   ```
+
+6. start frontend dev server
 - 特别提示_在cloudstudio不需要执行这些步骤
 - 原因是已经把生成的前端目标文件内容都拷贝到后端的相应目录中
 - 后端已经能够找到那些目标文件
