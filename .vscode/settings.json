@@ -82,24 +82,4 @@
 	"bookmarks.saveBookmarksInProject": true,
 	"bookmarks.sideBar.expanded": true,
 	"bookmarks.useWorkaroundForFormatters": true,
-	"commandAutolink.queries": [
-		{
-			"linkFilePattern": "**/*{.md}", // defaults to "**/*"
-			"linkFileLanguage": [
-				"md"
-			], // similar to linkFilePattern but instead use language ids, defaults to []
-			"linkPattern": "打开_扩展", // any regex to match the text, required
-			"linkCommand": "workbench.view.extensions", // command id to execute when clicking the matched pattern link, required
-			"linkText": "打开扩展视图" // command text to show in the hover popup
-		},
-		{
-			"linkFilePattern": "**/*{.md}", // defaults to "**/*"
-			"linkFileLanguage": [
-				"md"
-			], // similar to linkFilePattern but instead use language ids, defaults to []
-			"linkPattern": "0_第a00步_立即点击我啊_看看如何播放视频_a96_飞天_中国航天站_等你来出差.mp4", // any regex to match the text, required
-			"linkCommand": "seito-openfile.openFileFromText", // command id to execute when clicking the matched pattern link, required
-			"linkText": "播放视频_中国飞天" // command text to show in the hover popup
-		},
-	],
 }

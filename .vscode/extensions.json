@@ -1,7 +1,8 @@
 {
     "recommendations": [
         "formulahendry.code-runner",
-        "golang.go"
+        "Sycl.markdown-command-runner",
+        "cloudstudio.tutorialkit"
     ]
 }
 
