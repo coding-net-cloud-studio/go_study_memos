@@ -34,21 +34,23 @@ Memos is built with a curated tech stack. It is optimized for developer experien
 
    ```bash
    # 01_先构建_前端_生成前端的目标文件夹
-   cd web && npm install && npm run build && cd ..
+   [[ -f workspace.yml ]] && cd web && npm install && npm run build && touch ./dist/02_web构建时间_$(date '+%Y-%m-%d日_%H:%M:%S秒').md && ls -lah ./dist && cd ..
    # 02_把上面构建好的_前端目标文件夹_拷贝一份到_后端的./server/dist目录下
    # 03_上述覆盖了./server/dist中原有内容
-   cp -r ./web/dist/ ./server/
+   [[ -f workspace.yml ]] && [[ -d ./server/dist/ ]] && rm -rf ./server/dist/ && cp -r ./web/dist/ ./server/ && touch ./server/dist/03_从web前端dist拷贝时间_$(date '+%Y-%m-%d日_%H:%M:%S秒').md && ls -lah ./server/dist/
 
    # 05_为构建后端的go代码做准备
-   go mod download -x
+   [[ -f workspace.yml ]] && go mod download -x
+   # 06_为了放置memos后端服务正在运行_运用下述命令_先把memos尝试停止运行_真实查找的是_"air -c scripts/.air.toml"
+   [[ -f workspace.yml ]] && kill $(ps -ef | grep "air -c scripts/.air.toml" | grep -v grep | awk '{print $2}')
    # 07_构建后端的go代码_并且放入到./.air/目录下
-   go build -o ./.air/memos ./main.go
+   [[ -f workspace.yml ]] && [[ -f ./.air/memos ]] && rm -f ./.air/memos && go build -o ./.air/memos ./main.go && touch ./.air/07_go_build_memos_构建时间_$(date '+%Y-%m-%d日_%H:%M:%S秒').md && ls -lah ./.air
    # 09_调用刚刚生成的go后端可执行文件_设置用户名称是_root_密码是_a123456
-   ./.air/memos setup --host-username=root --host-password=a123456 --mode dev
+   [[ -f workspace.yml ]] && ./.air/memos setup --host-username=root --host-password=a123456 --mode dev
    # 11_此时应该位于本git仓库的顶层目录下_类似_绝对目录为_/root/RemoteWorking/22.wmsrc_memos
    # 15_执行如下的命令_以dev_开发模式_启动后台
    # 16_缺省的后台服务端口是_8081
-   air -c scripts/.air.toml
+   [[ -f workspace.yml ]] && air -c scripts/.air.toml
    ```
 
 3. 在浏览器中登录

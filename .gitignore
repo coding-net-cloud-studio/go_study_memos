@@ -28,6 +28,11 @@
 *wmbin_out*
 *wmbin_out*/
 
+# 本git仓库独有的规则
+
+# 后端的如下目录
+server/dist
+
 # Air (hot reload) generated
 .air
 
@@ -36,6 +41,8 @@ tmp
 
 # Frontend asset
 web/dist
+
+
 
 # build folder
 build
