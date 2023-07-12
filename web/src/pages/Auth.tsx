@@ -35,6 +35,16 @@ const Auth = () => {
       setUsername("demohero");
       setPassword("secret");
     }
+    // NOTE wmtag_memo_这里是我变更的_增加_开始
+    // 01_请参考如下文件中的内容
+    // 02_设置用户名称是_root_密码是_a123456
+    // 05_方便各位同学_在cloudstudio中点击html页面中_登录_或_login_按钮_立即进入
+    // docs/development.md
+    if (mode === "dev") {
+      setUsername("root");
+      setPassword("a123456");
+    }
+    // NOTE wmtag_memo_这里是我变更的_增加_结束
   }, [mode]);
 
   const handleUsernameInputChanged = (e: React.ChangeEvent<HTMLInputElement>) => {
