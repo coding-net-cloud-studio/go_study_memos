@@ -21,7 +21,7 @@ Memos is built with a curated tech stack. It is optimized for developer experien
    mkdir -p ~/RemoteWorking/
    cd ~/RemoteWorking/
 
-   git clone https://gitcode.net/weixin_44128887/cloudstudio_take_notes_memos ./22.wmsrc_memos
+   git clone 某个仓库的地址 ./22.wmsrc_memos
 
    mkdir -p ~/RemoteWorking/08.文件备份
    mkdir -p ~/RemoteWorking/11.可以删除
