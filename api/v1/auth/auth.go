@@ -98,7 +98,17 @@ func setTokenCookie(c echo.Context, name, token string, expiration time.Time) {
 	cookie.Path = "/"
 	// Http-only helps mitigate the risk of client side script accessing the protected cookie.
 	cookie.HttpOnly = true
-	cookie.SameSite = http.SameSiteStrictMode
+	// NOTE wmtag_memo_这里是我变更的_修改_开始
+	// find . -name "*.go" -exec grep -H -r cookie {} \;
+	// 解决iframe嵌套项目无法登录的问题
+	// https://juejin.cn/post/6949881366628532237
+	// 1_Strict,表示完全禁止第三方 Cookie,跨站点时,任何情况下都不会发送 Cookie.
+	// 2_Lax,大多数情况下不发送第三方 Cookie,但是导航到目标网址的 Get 等请求除外
+	// 3_None,表示关闭跨站限制,但是需要显式设置Secure属性并配置https 如果不设置,浏览器会默认为Lax.正如上文所提到的.
+	// cookie.SameSite = http.SameSiteStrictMode
+	cookie.SameSite = http.SameSiteNoneMode
+	cookie.Secure = true
+	// NOTE wmtag_memo_这里是我变更的_修改_结束
 	c.SetCookie(cookie)
 }
 
