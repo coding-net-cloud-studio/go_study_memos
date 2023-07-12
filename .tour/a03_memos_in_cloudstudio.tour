@@ -3,9 +3,9 @@
   "title": "test",
   "steps": [
     {
-      "file": "README.md",
+      "file": "3_development_tour.md",
       "description": "diyibu",
-      "line": 18
+      "line": 8
     }
   ]
 }
