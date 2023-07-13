@@ -2,14 +2,15 @@
 
 ## 步骤
 
-a1. 
+a1.
 
    ```bash
    # TODO a1_09_概览_老师_重点_修改了哪些文件
-   [[ -f workspace.yml ]] && grep -r -H wmtag_memo_教学 | grep NOTE 
+   [[ -f workspace.yml ]] && grep -r -H wmtag_memo_教学 | grep NOTE
    ```
 
-b2. 使用air启动memos后端(在修改go语言编写的后端的时候,可以自动重载_liveload)
+### b2_memos_构建_与_使用air启动memos
+- 在修改go语言编写的后端的时候,可以自动重载_liveload
 
    ```bash
    # TODO b2_01_先构建_前端_生成前端的目标文件夹
@@ -49,15 +50,17 @@ b2. 使用air启动memos后端(在修改go语言编写的后端的时候,可以�
    [[ -f workspace.yml ]] && air -c scripts/.air.toml
    ```
 
-c3. 在浏览器中登录
+### c3_memos_在浏览器中登录
 	- cloudstudio 会自动打开一个链接地址
-	- 类似于 https://ohbott-buwkox-8081.preview.myide.io/
+	- 类似于 https://ohbott-buwkox-8081.preview.myide.io/ [端口号是8081 由air -c scripts/.air.toml 命令启动的]
+   - 类似于 https://ohbott-buwkox-8118.preview.myide.io/ [端口号是8118 由docker run命令启动的]
+   - 类似于 https://ohbott-buwkox-8228.preview.myide.io/ [端口号是8228 由docker-compose up -d 命令启动的]
 	- 每个学生打开的链接都不相同
 	- 选择中文语言
 	- 用户名称: root
 	- 用户密码: a123456
 
-d4. 尝试构建docker镜像
+### d4_memos_尝试构建docker镜像
    ```bash
    # TODO d4_01_下拉构建过程中需要用的镜像_需要等待比较长一点的时间
    [[ -f workspace.yml ]] && docker pull golang:1.19.3-alpine3.16
@@ -80,7 +83,7 @@ d4. 尝试构建docker镜像
 
    ```bash
    # TODO d4_09_尝试使用docker-compose运行起来_这次使用的外露端口是_8228_端口
-   [[ -f workspace.yml ]] && docker-compose up -d 
+   [[ -f workspace.yml ]] && docker-compose up -d
    ```
 
    ```bash

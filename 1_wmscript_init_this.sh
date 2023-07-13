@@ -53,10 +53,12 @@ f20_linux_git_setting() {
 
 }
 
+# NOTE wmtag_memo_教学_如何定制自己使用的vscode扩展组合
+# wmtag_memo_查看当前有哪些vscode扩展已经被安装上了_在本函数中_各位同学可以_自由的添加_或删除_vscode扩展_定制自己的需要环境
 # 在cloudstudio中快速的安装某几个vscode的扩展
 f27_38_install_some_vs_ext_quick(){
 
-	# NOTE 查看当前有哪些vscode扩展已经被安装上了
+	# NOTE 列出cloudstudio云上工作室已经安装的vscode扩展列表
 	# [[ -f $(which cloudstudio) ]] && cloudstudio --list-extensions
 
 	# NOTE 安装某些vscode的扩展
@@ -66,25 +68,25 @@ f27_38_install_some_vs_ext_quick(){
 	# [[ -f $(which cloudstudio) ]] && cloudstudio --install-extension  AMiner.codegeex                   --force
 	[[ -f $(which cloudstudio) ]] && cloudstudio --install-extension  alefragnani.Bookmarks             --force
 	[[ -f $(which cloudstudio) ]] && cloudstudio --install-extension  ExodiusStudios.comment-anchors    --force
-	[[ -f $(which cloudstudio) ]] && cloudstudio --install-extension  ritwickdey.LiveServer             --force
+	# [[ -f $(which cloudstudio) ]] && cloudstudio --install-extension  ritwickdey.LiveServer             --force
 	[[ -f $(which cloudstudio) ]] && cloudstudio --install-extension  ms-azuretools.vscode-docker       --force
 	# [[ -f $(which cloudstudio) ]] && cloudstudio --install-extension  cweijan.vscode-office             --force
-	[[ -f $(which cloudstudio) ]] && cloudstudio --install-extension  arcanis.vscode-zipfs              --force
-	[[ -f $(which cloudstudio) ]] && cloudstudio --install-extension  mads-hartmann.bash-ide-vscode     --force
+	# [[ -f $(which cloudstudio) ]] && cloudstudio --install-extension  arcanis.vscode-zipfs              --force
+	# [[ -f $(which cloudstudio) ]] && cloudstudio --install-extension  mads-hartmann.bash-ide-vscode     --force
 	# [[ -f $(which cloudstudio) ]] && cloudstudio --install-extension  vsls-contrib.codetour             --force
 	# [[ -f $(which cloudstudio) ]] && cloudstudio --install-extension  ms-vscode.makefile-tools          --force
 	[[ -f $(which cloudstudio) ]] && cloudstudio --install-extension  golang.go                         --force
 	# [[ -f $(which cloudstudio) ]] && cloudstudio --install-extension  egomobile.vscode-powertools       --force
-	[[ -f $(which cloudstudio) ]] && cloudstudio --install-extension  maelvalais.autoconf               --force
+	# [[ -f $(which cloudstudio) ]] && cloudstudio --install-extension  maelvalais.autoconf               --force
 	[[ -f $(which cloudstudio) ]] && cloudstudio --install-extension  Sycl.markdown-command-runner      --force
 	[[ -f $(which cloudstudio) ]] && cloudstudio --install-extension  CloudStudio.tutorialkit           --force
 
-	[[ -f $(which cloudstudio) ]] && cloudstudio --install-extension  Fr43nk.seito-openfile             --force
+	# [[ -f $(which cloudstudio) ]] && cloudstudio --install-extension  Fr43nk.seito-openfile             --force
 
-	[[ -f $(which cloudstudio) ]] && cloudstudio --install-extension  cweijan.vscode-mysql-client2      --force
+	# [[ -f $(which cloudstudio) ]] && cloudstudio --install-extension  cweijan.vscode-mysql-client2      --force
 	[[ -f $(which cloudstudio) ]] && cloudstudio --install-extension  cweijan.vscode-database-client2   --force
 	
-	[[ -f $(which cloudstudio) ]] && cloudstudio --install-extension  mkhl.direnv                       --force
+	# [[ -f $(which cloudstudio) ]] && cloudstudio --install-extension  mkhl.direnv                       --force
 
 	# NOTE 下面是强制删除某些vscode的扩展
 	[[ -f $(which cloudstudio) ]] && cloudstudio --uninstall-extension muhammad-sammy.csharp             --force
@@ -111,7 +113,10 @@ f30_install_common_software(){
 		hugo \
 		flex \
 		sqlite3 \
-		ffmpeg \
+		mysql-client \
+		redis-tools
+		
+		# apt install -y ffmpeg 
 
 }
 
@@ -132,12 +137,12 @@ f68_20_install_go_tools(){
 
 	# goawk
 	# go语言对于awk的实现.
-	GO111MODULE=auto GOPROXY=https://goproxy.cn,https://mirrors.tencent.com/go/,https://mirrors.aliyun.com/goproxy,https://proxy.golang.com.cn,direct go install github.com/benhoyt/goawk@latest
+	# GO111MODULE=auto GOPROXY=https://goproxy.cn,https://mirrors.tencent.com/go/,https://mirrors.aliyun.com/goproxy,https://proxy.golang.com.cn,direct go install github.com/benhoyt/goawk@latest
 
 
 	# gojq 
 	# go处理json文件格式.是jq的go语言实现.
-	GO111MODULE=auto GOPROXY=https://goproxy.cn,https://mirrors.tencent.com/go/,https://mirrors.aliyun.com/goproxy,https://proxy.golang.com.cn,direct go install github.com/itchyny/gojq/cmd/gojq@latest
+	# GO111MODULE=auto GOPROXY=https://goproxy.cn,https://mirrors.tencent.com/go/,https://mirrors.aliyun.com/goproxy,https://proxy.golang.com.cn,direct go install github.com/itchyny/gojq/cmd/gojq@latest
 
 
 	# glow 
@@ -149,7 +154,7 @@ f68_20_install_go_tools(){
 	# 安装谢孟军以前写的类似curl的bat工具
 	# Bat 是使用 Go 实现的 CLI 工具,类似 cURL 的工具,可以说是 Go 语言版本的 cURL .
 	# Bat 可以用来测试,调试和 HTTP 服务器进行一般的交互.
-	GO111MODULE=auto GOPROXY=https://goproxy.cn,https://mirrors.tencent.com/go/,https://mirrors.aliyun.com/goproxy,https://proxy.golang.com.cn,direct go install github.com/astaxie/bat@latest
+	# GO111MODULE=auto GOPROXY=https://goproxy.cn,https://mirrors.tencent.com/go/,https://mirrors.aliyun.com/goproxy,https://proxy.golang.com.cn,direct go install github.com/astaxie/bat@latest
 
 	# csv2md
 	# csv数据格式文件转为markdown格式的表格_方便嵌入到docsify中去
@@ -209,6 +214,7 @@ f71_set_go_env(){
 
 }
 
+# ======================================================================================
 
 
 # 本git仓库特有的下拉好多个docker镜像
@@ -218,66 +224,9 @@ y77_docker_pull_images(){
 
 	docker pull golang:1.19.3-alpine
 
-	docker pull nginx:1.23.3-alpine
-
-	docker pull mysql:8.0.31
-
-	docker pull redis:latest
-
-	docker pull mongo:latest
-
-	docker pull node:latest
-
 }
 
-# 对于docker pull下来的mysql:8.0.31进行操作
-# 建立一个特定的版本
-y83_create_leaf_revised_mysql_image(){
-
-	# 先删除一次目标容器_防止_目标容器已经被生成了
-	docker stop c48_leaf_mysql_8_0_31
-	docker rm c48_leaf_mysql_8_0_31
-
-	# 先删除一次目标镜像
-	docker rmi im33_leaf_mysql:8.0.31_with_init
-
-	# 应用原始的版本启动一个容器
-	docker run \
-		-it \
-		-d \
-		--name c48_leaf_mysql_8_0_31 \
-		mysql:8.0.31 \
-		/bin/bash
-
-	# 把文件拷贝进去
-	docker cp \
-		./data/mysql/init/* \
-		c48_leaf_mysql_8_0_31:/docker-entrypoint-initdb.d/
-	
-	# 为了防止出错_把目录再拷贝一遍
-	docker cp \
-		./data/mysql/init/ \
-		c48_leaf_mysql_8_0_31:/docker-entrypoint-initdb.d/
-	
-	# 拷贝完毕_停止容器
-	docker stop c48_leaf_mysql_8_0_31
-
-	# 把容器提交为镜像
-	docker commit -a "cs_student" -m "2023_07_09_0020-wmtag_memo_拷贝_data/mysql/init_进入" c48_leaf_mysql_8_0_31 im33_leaf_mysql:8.0.31_with_init
-
-	# 删除容器_这个步骤暂时不执行
-	# docker rm c48_leaf_mysql_8_0_31
-
-	# 测试新的镜像_命令如下
-	# docker run \
-	# 	-it \
-	# 	--rm \
-	# 	--name c52_leaf_mysql_8_0_31_with_init \
-	# 	im33_leaf_mysql:8.0.31_with_init \
-	# 	/bin/bash
-}
-
-
+# ======================================================================================
 
 all(){
 
@@ -297,8 +246,6 @@ all(){
 
 	# y77_docker_pull_images
 
-	# 为了leaf在cloudstudio中能够运行起来_创建特殊版本的mysql镜像
-	# y83_create_leaf_revised_mysql_image
 }
 
 f82_main(){
