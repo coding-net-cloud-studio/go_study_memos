@@ -1,5 +1,11 @@
 # memos
 
+# <font color="#dddd00" size="6">我们一起Go</font><br /> 
+
+- <font color="#dddd00">在中国数百万的程序员都有了自己的家庭与子女</font><br /> 
+- <font color="#dddd00">Memos很适合数百万程序员的妻子,给她们的孩子制作\"时光都去了哪儿了!\" 图片格式,家庭视觉日记</font><br /> 
+
+
 <img height="72px" src="https://usememos.com/logo.webp" alt="✍️ memos" align="right" />
 
 A lightweight, self-hosted memo hub. Open Source and Free forever.
