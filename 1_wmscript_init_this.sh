@@ -1,5 +1,16 @@
 #! /bin/bash
 
+# NOTE 本教程是针对完全的初学者
+# NOTE 本教程是针对"泛开发者"
+# NOTE 泛开发者是指:在本职工作领域是专业人士,但不以编程作为谋生手段
+# NOTE 本教程不适合初级程序员_初级程序员应该去看更深的教程了_不需要看本教程
+	# NOTE 向已经是程序员的群体,深度推荐:白明,柴树杉,丁尔男,史斌,郝林,徐秋华,陈剑煜,刘丹冰,廖显东,郭宏志,湖南长沙老郭(Nick),王中阳,申专等老师与专家的专业课程
+# NOTE 所有曾经编写过300行代码的人士_都不适合看本初级教程了_应该去看其他更深的教程了
+# NOTE Makefile中是支持utf-8(unicode)作为目标名称的_我们这样写的目的是给"泛开发者"在初期容易理解实行的
+# NOTE 在后继的课程中_我们将取消这些方法_回归到_英文目标名的传统方式
+# NOTE 在bash shell script脚本中_针对_泛开发者_我们使用很长的函数名称这样的_非传统方式
+# NOTE 在后继的课程中_我们将取消上述_长函数名的_非传统方式_回归常规写法
+
 pause_60_second(){
 	if read -t 60 -p "暂停60秒,按回车继续运行: "
 	then
@@ -85,7 +96,7 @@ f27_38_install_some_vs_ext_quick(){
 
 	# [[ -f $(which cloudstudio) ]] && cloudstudio --install-extension  cweijan.vscode-mysql-client2      --force
 	[[ -f $(which cloudstudio) ]] && cloudstudio --install-extension  cweijan.vscode-database-client2   --force
-	
+
 	# [[ -f $(which cloudstudio) ]] && cloudstudio --install-extension  mkhl.direnv                       --force
 
 	# NOTE 下面是强制删除某些vscode的扩展
@@ -115,8 +126,8 @@ f30_install_common_software(){
 		sqlite3 \
 		mysql-client \
 		redis-tools
-		
-		# apt install -y ffmpeg 
+
+		# apt install -y ffmpeg
 
 }
 
@@ -140,16 +151,16 @@ f68_20_install_go_tools(){
 	# GO111MODULE=auto GOPROXY=https://goproxy.cn,https://mirrors.tencent.com/go/,https://mirrors.aliyun.com/goproxy,https://proxy.golang.com.cn,direct go install github.com/benhoyt/goawk@latest
 
 
-	# gojq 
+	# gojq
 	# go处理json文件格式.是jq的go语言实现.
 	# GO111MODULE=auto GOPROXY=https://goproxy.cn,https://mirrors.tencent.com/go/,https://mirrors.aliyun.com/goproxy,https://proxy.golang.com.cn,direct go install github.com/itchyny/gojq/cmd/gojq@latest
 
 
-	# glow 
+	# glow
 	# glow 在TUI,也就是终端中显示markdown文件.
 	# 能否很好的显示各种颜色标示的内容
 	# 下载时间比较长一点
-	GO111MODULE=auto GOPROXY=https://goproxy.cn,https://mirrors.tencent.com/go/,https://mirrors.aliyun.com/goproxy,https://proxy.golang.com.cn,direct go install github.com/charmbracelet/glow@latest 
+	GO111MODULE=auto GOPROXY=https://goproxy.cn,https://mirrors.tencent.com/go/,https://mirrors.aliyun.com/goproxy,https://proxy.golang.com.cn,direct go install github.com/charmbracelet/glow@latest
 
 	# 安装谢孟军以前写的类似curl的bat工具
 	# Bat 是使用 Go 实现的 CLI 工具,类似 cURL 的工具,可以说是 Go 语言版本的 cURL .
@@ -164,10 +175,10 @@ f68_20_install_go_tools(){
 	# go使用Air实时热加载
 	GO111MODULE=auto GOPROXY=https://goproxy.cn,https://mirrors.tencent.com/go/,https://mirrors.aliyun.com/goproxy,https://proxy.golang.com.cn,direct go install github.com/cosmtrek/air@latest
 
-	# html2md 
+	# html2md
 	# 把html页面转换为markdown格式
-	GO111MODULE=auto GOPROXY=https://goproxy.cn,https://mirrors.tencent.com/go/,https://mirrors.aliyun.com/goproxy,https://proxy.golang.com.cn,direct go install github.com/suntong/html2md@latest 
-		# NOTE 紧随其后的2条容易失败_原因是访问github的问题_不是html2md出现错误 
+	GO111MODULE=auto GOPROXY=https://goproxy.cn,https://mirrors.tencent.com/go/,https://mirrors.aliyun.com/goproxy,https://proxy.golang.com.cn,direct go install github.com/suntong/html2md@latest
+		# NOTE 紧随其后的2条容易失败_原因是访问github的问题_不是html2md出现错误
 			# html2md -i https://github.com/suntong/html2md | head -3
 			# html2md -i https://github.com/JohannesKaufmann/html-to-markdown -s "div.BorderGrid-row.hide-sm.hide-md > div"
 		# echo '<strong>Bold Text</strong>' | html2md -i
@@ -214,6 +225,147 @@ f71_set_go_env(){
 
 }
 
+
+# ======================================================================================
+# make a1_memos_概览老师主要修改了哪些文件
+y01_a1_memos_check_revised_files(){
+	# grep -H -r wmtag_memo | grep -v "^.git"
+	[[ -f workspace.yml ]] && grep -r -H wmtag_memo_教学 | grep NOTE
+
+	return 0
+}
+
+# --------------------------------------------------------------------------------------
+# NOTE 被y36_b2_memos_build_and_start_with_livecode_by_air()函数所调用
+# b2_01_先构建_前端_生成前端的目标文件夹
+y20_b2_01_npm_build_frontend(){
+	[[ -f workspace.yml ]] && cd web && npm install && npm run build && touch ./dist/02_web构建时间_$(date '+%Y-%m-%d日_%H:%M:%S秒').md && ls -lah ./dist && cd ..
+	return 0
+}
+
+# NOTE 被y36_b2_memos_build_and_start_with_livecode_by_air()函数所调用
+# b2_02_把上面构建好的_前端目标文件夹_拷贝一份到_后端的./server/dist目录下
+# 03_将覆盖./server/dist中原有内容
+y22_copy_frontend_dist_to_backend_directory(){
+
+	[[ -f workspace.yml ]] && [[ -d ./server/dist/ ]] && rm -rf ./server/dist/ && cp -r ./web/dist/ ./server/ && touch ./server/dist/03_从web前端dist拷贝时间_$(date '+%Y-%m-%d日_%H:%M:%S秒').md && ls -lah ./server/dist/
+	return 0
+
+}
+
+# NOTE 被y36_b2_memos_build_and_start_with_livecode_by_air()函数所调用
+# b2_05_为构建后端的go代码做准备
+y24_b2_05_prepare_go_env_for_go_build(){
+	[[ -f workspace.yml ]] && go mod download -x
+	`return 0
+}
+
+# NOTE 被y36_b2_memos_build_and_start_with_livecode_by_air()函数所调用
+# b2_06_为了放置memos后端服务正在运行_运用下述命令_先把memos尝试停止运行_真实查找的是_"air -c scripts/.air.
+y26_b2_06_stop_all_memos_server(){
+	[[ -f workspace.yml ]] && kill $(ps -ef | grep "air -c scripts/.air.toml" | grep -v grep | awk '{print $2}')
+	return 0
+}
+
+# NOTE 被y36_b2_memos_build_and_start_with_livecode_by_air()函数所调用
+# b2_07_构建后端的go代码_并且放入到./.air/目录下
+y28_b2_07_go_build_backend_and_copy_it_to_target_directory(){
+	[[ -f workspace.yml ]] && [[ -f ./.air/memos ]] && rm -f ./.air/memos && go build -o ./.air/memos ./main.go && touch ./.air/07_go_build_memos_构建时间_$(date '+%Y-%m-%d日_%H:%M:%S秒').md && ls -lah ./.air
+	return 0
+}
+
+# NOTE 被y36_b2_memos_build_and_start_with_livecode_by_air()函数所调用
+# b2_09_调用刚刚生成的go后端可执行文件_设置用户名称是_root_密码是_a123456
+# REVIEW 本步骤可以不执行_为了化简学习难度_老师提供了一个初始memos数据库_已经调用过本步骤了
+y30_b2_09_memos_setup(){
+
+	[[ -f workspace.yml ]] && ./.air/memos setup --host-username=root --host-password=a123456 --mode dev
+	return 0
+
+}
+
+# NOTE 被y36_b2_memos_build_and_start_with_livecode_by_air()函数所调用
+# b2_15_执行如下的命令_以dev_开发模式_启动后台
+# b2_11_此时应该位于本git仓库的顶层目录下_类似_绝对目录为_/root/RemoteWorking/22.wmsrc_memos 或 /workspace/22.wmsrc_memos
+# b2_16_缺省的后台服务端口是_8081
+y32_b2_15_start_memos_with_air_liveload(){
+	[[ -f workspace.yml ]] && air -c scripts/.air.toml
+	return 0
+}
+
+# 被 make b2_memos_构建_并_使用air启动memos 所调用
+# make b2_memos_构建_并_使用air启动memos
+y36_b2_memos_build_and_start_with_livecode_by_air(){
+	# echo "$TODO_啥都不做_就是一个占位_保证构建通过"
+
+	# b2_01_先构建_前端_生成前端的目标文件夹
+	y20_b2_01_npm_build_frontend
+
+	# b2_02_把上面构建好的_前端目标文件夹_拷贝一份到_后端的./server/dist目录下
+	# 03_将覆盖./server/dist中原有内容
+	y22_copy_frontend_dist_to_backend_directory
+
+	# b2_05_为构建后端的go代码做准备
+	y24_b2_05_prepare_go_env_for_go_build
+
+	# b2_06_为了放置memos后端服务正在运行_运用下述命令_先把memos尝试停止运行_真实查找的是_"air -c scripts/.air.
+	y26_b2_06_stop_all_memos_server
+
+	# NOTE 加入如下的行_帮助_泛开发者_体验最简单的_暂停运行_打开其他终端_查看中间结果
+	# pause_60_second
+	# echo -e "\n运行在 $(pwd)/${BASH_SOURCE[${#BASH_SOURCE[@]} - 1]} 脚本的 ${FUNCNAME} 函数中 ${LINENO} 行\n" >> ${WMTAG_LOCK_FILE}
+
+	# b2_07_构建后端的go代码_并且放入到./.air/目录下
+	y28_b2_07_go_build_backend_and_copy_it_to_target_directory
+
+	# b2_09_调用刚刚生成的go后端可执行文件_设置用户名称是_root_密码是_a123456
+	# REVIEW 本步骤可以不执行_为了化简学习难度_老师提供了一个初始memos数据库_已经调用过本步骤了
+	# y30_b2_09_memos_setup
+
+	# b2_15_执行如下的命令_以dev_开发模式_启动后台
+	# b2_11_此时应该位于本git仓库的顶层目录下_类似_绝对目录为_/root/RemoteWorking/22.wmsrc_memos 或 /workspace/22.wmsrc_memos
+	# b2_16_缺省的后台服务端口是_8081
+	y32_b2_15_start_memos_with_air_liveload
+
+	return 0
+
+}
+
+# --------------------------------------------------------------------------------------
+
+# make k9_memos_stop_all
+y66_k9_memos_stop_all(){
+	echo "$TODO_啥都不做_就是一个占位_保证构建通过"
+}
+
+# make p11_开启_cloudstudio自动运行预览
+y72_p11_change_vscode_preview_file_content(){
+	# echo "$TODO_啥都不做_就是一个占位_保证构建通过"
+
+	# NOTE 方法就是把内容暴力写入.vscode/preview.yml中
+	# cloud studio中vscode_browser_preview设置文件
+	CS_VSCODE_SETTINGS_BROWSER_PREVIEW=./.vscode/preview.yml
+	# -----------------------------------------------------------
+	# '嵌入文档涵盖了生成脚本的主体部分.
+
+	(
+	cat <<'EOF'
+{
+autoOpen: true
+apps:
+  - port: 5000
+    run: pip3 install -i https://mirrors.tencent.com/pypi/simple/ -r ./.wmstudy/wm28.preview/web/requirements.txt && python3 ./.wmstudy/wm28.preview/web/app.py
+    root: .
+    name: 我们一起Go_公告板
+    # 我们在后继的讲解中_需要用到_机械工业出版社_2022年01月出版的_廖显东老师_这本书中部分内容
+    description: cloud_studio_go学习_廖显东_老师_goAdvanced_书籍介绍_启动_公告板
+    autoOpen: true
+}
+EOF
+	) > ${CS_VSCODE_SETTINGS_BROWSER_PREVIEW}
+
+}
+
 # ======================================================================================
 
 
@@ -249,7 +401,7 @@ all(){
 }
 
 f82_main(){
-	
+
 	# 判断是否位于腾云扣钉的cloudstudio工作空间中
 	if [[ -f $(which cloudstudio) ]]; then
 		# 已经在cloudstudio工作空间中

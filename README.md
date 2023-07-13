@@ -8,7 +8,10 @@
 
 <img height="72px" src="https://usememos.com/logo.webp" alt="✍️ memos" align="right" />
 
+
 A lightweight, self-hosted memo hub. Open Source and Free forever.
+
+[本教程是针对泛开发者_这里有本教程适用人群的_说明](./Makefile)
 
 <a href="https://usememos.com/docs">Documentation</a> •
 <a href="https://demo.usememos.com/">Live Demo</a> •
