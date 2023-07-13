@@ -57,7 +57,7 @@
     {
       "file": ".vscode/preview.yml",
       "title": "b2_memos_构建_并_使用air启动memos",
-      "description": "TODO make p11_开启_cloudstudio自动运行预览 \n\n 点击下面的命令_去执行 \n\n>> make p11_开启_cloudstudio自动运行预览",
+      "description": "TODO make p11_开启_cloudstudio自动运行预览 \n\n ![选择中文界面](.tours/c3_16_10_选择_简体中文.png) \n\n 点击下面的命令_去执行 \n\n>> make p11_开启_cloudstudio自动运行预览",
       "line": 1,
       "selection": {
         "start": {
@@ -69,6 +69,18 @@
           "character": 6
         }
       }
+    },
+    {
+      "file": "3_development_tour.md",
+      "title": "c3_16_运用下述命令_尝试把memos尝试停止运行",
+      "description": "TODO 尝试停止所有被启动的服务_或_容器等 \n\n 点击下面的命令_去执行 \n\n>> make k9_memos_stop_all",
+      "pattern": "^[^\\S\\n]*# TODO c3_16_运用下述命令_尝试把memos尝试停止运行"
+    },
+    {
+      "file": "3_development_tour.md",
+      "title": "p11_开启_cloudstudio自动运行预览",
+      "description": "TODO p11_开启_cloudstudio自动运行预览 \n\n 点击下面的命令_去执行 \n\n>> make p11_开启_cloudstudio自动运行预览",
+      "pattern": "^[^\\S\\n]*# TODO p11_开启_cloudstudio自动运行预览"
     }
     
   ]

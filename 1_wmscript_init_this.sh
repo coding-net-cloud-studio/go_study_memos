@@ -235,6 +235,7 @@ f71_set_go_env(){
 # make a1_memos_概览老师主要修改了哪些文件
 y01_a1_memos_check_revised_files(){
 	# grep -H -r wmtag_memo | grep -v "^.git"
+	clear
 	[[ -f workspace.yml ]] && grep -r -H wmtag_memo_教学 | grep NOTE
 
 	return 0

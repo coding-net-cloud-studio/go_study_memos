@@ -52,12 +52,12 @@
 
    ```bash
    # TODO b2_06_为了放置memos后端服务正在运行_运用下述命令_先把memos尝试停止运行_真实查找的是_"air -c scripts/.air.toml"
-   [[ -f workspace.yml ]] && kill $(ps -ef | grep "air -c scripts/.air.toml" | grep -v grep | awk '{print $2}')
+   [[ -f workspace.yml ]] && kill $(ps -ef | grep "air -c scripts/.air.toml" | grep -v grep | awk '{print $2}') || echo "运行成功_不必关注其他信息\n"
    ```
 
    ```bash
    # TODO b2_07_构建后端的go代码_并且放入到./.air/目录下
-   [[ -f workspace.yml ]] && [[ -f ./.air/memos ]] && rm -f ./.air/memos && go build -o ./.air/memos ./main.go && touch ./.air/07_go_build_memos_构建时间_$(date '+%Y-%m-%d日_%H:%M:%S秒').md && ls -lah ./.air
+   [[ -f workspace.yml ]] && [[ -f ./.air/memos ]] && rm -f ./.air/memos && go build -x -v -o ./.air/memos ./main.go && touch ./.air/07_go_build_memos_构建时间_$(date '+%Y-%m-%d日_%H:%M:%S秒').md && ls -lah ./.air
    ```
 
    ```bash
@@ -81,6 +81,12 @@
 	- 选择中文语言
 	- 用户名称: root
 	- 用户密码: a123456
+
+   ```bash
+   # TODO c3_16_运用下述命令_尝试把memos尝试停止运行
+   # 真实查找的是_"air -c scripts/.air.toml"
+   [[ -f workspace.yml ]] && kill $(ps -ef | grep "air -c scripts/.air.toml" | grep -v grep | awk '{print $2}') || echo "运行成功_不必关注其他信息\n"
+   ```
 
 ### d4_memos_尝试构建docker镜像
    ```bash
@@ -111,4 +117,10 @@
    ```bash
    # TODO d4_11_尝试停止docker-compose启动容器
    [[ -f workspace.yml ]] && docker-compose down
+   ```
+
+### p11_开启_cloudstudio自动运行预览
+   ```bash
+   # TODO p11_开启_cloudstudio自动运行预览
+   [[ -f workspace.yml ]] && make p11_开启_cloudstudio自动运行预览
    ```
