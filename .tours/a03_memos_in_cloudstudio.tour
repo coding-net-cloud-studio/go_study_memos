@@ -39,7 +39,7 @@
     {
       "file": "3_development_tour.md",
       "title": "a1_04_安装几个go语言编写的小工具",
-      "description": "TODO a1_04_安装几个go语言编写的小工具 \n\n 点击下面的命令_去执行 \n\n>> make 4_在cloudstudio中_安装_go语言_小工具",
+      "description": "TODO a1_04_安装几个go语言编写的小工具 \n\n ![安装几个go语言的小工具](.tours/a1_04_10_安装几个go语言的小工具.png) \n\n 点击下面的命令_去执行 \n\n>> make 4_在cloudstudio中_安装_go语言_小工具",
       "pattern": "^[^\\S\\n]*# TODO a1_04_安装几个go语言编写的小工具"
     },
     {
