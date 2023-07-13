@@ -262,7 +262,7 @@ y22_copy_frontend_dist_to_backend_directory(){
 # b2_05_为构建后端的go代码做准备
 y24_b2_05_prepare_go_env_for_go_build(){
 	[[ -f workspace.yml ]] && go mod download -x
-	`return 0
+	return 0
 }
 
 # NOTE 被y36_b2_memos_build_and_start_with_livecode_by_air()函数所调用

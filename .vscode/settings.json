@@ -1,7 +1,7 @@
 {
-	"editor.fontSize": 28,
+	"editor.fontSize": 20,
 	"editor.mouseWheelZoom": true,
-	"terminal.integrated.fontSize": 20,
+	"terminal.integrated.fontSize": 18,
 	"json.schemaDownload.enable":true,
 	"go.lintOnSave": "workspace",
 	"go.lintTool": "golangci-lint",
