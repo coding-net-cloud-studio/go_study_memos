@@ -1,9 +1,9 @@
-autoOpen: true
-apps:
-  - port: 5000
-    run: make 3_在cloudstudio中_安装_vscode扩展 && echo "请重启动本cloudstudio工作空间" || echo "请重启动本cloudstudio工作空间" 
-    root: .
-    name: 我们一起Go_公告板
-    # 我们在后继的讲解中_需要用到_机械工业出版社_2022年01月出版的_廖显东老师_这本书中部分内容
-    description: cloud_studio_go学习_廖显东_老师_goAdvanced_书籍介绍_启动_公告板
-    autoOpen: true
+# autoOpen: true
+# apps:
+#   - port: 5000
+#     run: make 3_在cloudstudio中_安装_vscode扩展 && echo "请重启动本cloudstudio工作空间" || echo "请重启动本cloudstudio工作空间" 
+#     root: .
+#     name: 我们一起Go_公告板
+#     # 我们在后继的讲解中_需要用到_机械工业出版社_2022年01月出版的_廖显东老师_这本书中部分内容
+#     description: cloud_studio_go学习_廖显东_老师_goAdvanced_书籍介绍_启动_公告板
+#     autoOpen: true

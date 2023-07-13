@@ -1,7 +1,8 @@
 {
     "recommendations": [
         "formulahendry.code-runner",
-        "Sycl.markdown-command-runner"
+        "Sycl.markdown-command-runner",
+        "CloudStudio.tutorialkit"
     ]
 }
 
