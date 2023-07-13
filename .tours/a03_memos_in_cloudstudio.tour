@@ -3,6 +3,22 @@
   "title": "3_在cloudstudio中构建与运行Memos",
   "steps": [
     {
+      "file": "Makefile",
+      "title": "a1_00_本教程适用范围很窄_只适合_初学者中的初学者",
+      "description": "**NOTE 本教程仅仅局限于_给初学者中的初学者_坚持到最后_加入我们!** \n\n ![小白中的小白](.tours/a1_00_gongfu_entry_level.webp)",
+      "line": 3,
+      "selection": {
+        "start": {
+          "line": 3,
+          "character": 1
+        },
+        "end": {
+          "line": 3,
+          "character": 37
+        }
+      }
+    },
+    {
       "file": "3_development_tour.md",
       "title": "a1_01_判断是否处于cloudstudio工作空间中",
       "description": "TODO a1_01_判断是否处于cloudstudio工作空间中 \n\n 点击下面的命令_去执行 \n\n>> make 1_check",
@@ -35,8 +51,24 @@
     {
       "file": "Makefile",
       "title": "b2_memos_构建_并_使用air启动memos",
-      "description": "TODO a1_a1_概览老师主要修改了哪些文件 \n\n 点击下面的命令_去执行 \n\n>> make a1_memos_概览老师主要修改了哪些文件",
-      "pattern": "^[^\\S\\n]*make b2_memos_构建_并_使用air启动memos*"
+      "description": "TODO make b2_memos_构建_并_使用air启动memos \n\n 点击下面的命令_去执行 \n\n>> make b2_memos_构建_并_使用air启动memos",
+      "pattern": "^[^\\S\\n]*@echo \"make b2_memos_构建_并_使用air启动memos         : 构建memos前端_构建memos后端_并_使用air启动memos\""
+    },
+    {
+      "file": ".vscode/preview.yml",
+      "title": "b2_memos_构建_并_使用air启动memos",
+      "description": "TODO make p11_开启_cloudstudio自动运行预览 \n\n 点击下面的命令_去执行 \n\n>> make p11_开启_cloudstudio自动运行预览",
+      "line": 1,
+      "selection": {
+        "start": {
+          "line": 1,
+          "character": 1
+        },
+        "end": {
+          "line": 1,
+          "character": 6
+        }
+      }
     }
     
   ]

@@ -4,6 +4,7 @@
 
 - <font color="#dddd00">在中国数百万的程序员都有了自己的家庭与子女</font><br /> 
 - <font color="#dddd00">Memos很适合数百万程序员的妻子,给她们的孩子制作\"时光都去了哪儿了!\" 图片格式,家庭视觉日记</font><br /> 
+- <font color="#dddd00">所有的程序员都是从初学者中的初学者成长起来的_本教程仅仅局限于_给初学者中的初学者</font><br /> 
 
 
 <img height="72px" src="https://usememos.com/logo.webp" alt="✍️ memos" align="right" />

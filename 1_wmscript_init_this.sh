@@ -340,7 +340,9 @@ y36_b2_memos_build_and_start_with_livecode_by_air(){
 
 # make k9_memos_stop_all
 y66_k9_memos_stop_all(){
-	echo "$TODO_啥都不做_就是一个占位_保证构建通过"
+	# echo "$TODO_啥都不做_就是一个占位_保证构建通过"
+	[[ -f workspace.yml ]] && kill $(ps -ef | grep "air -c scripts/.air.toml" | grep -v grep | awk '{print $2}')
+	return 0
 }
 
 # make p11_开启_cloudstudio自动运行预览
