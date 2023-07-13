@@ -195,6 +195,7 @@ f68_20_install_go_tools(){
 		# REVIEW 这个是库 Convert HTML to Markdown. Even works with entire websites and can be extended through rules.
 			# https://github.com/JohannesKaufmann/html-to-markdown.git
 
+	ls ${GOPATH}/bin
 }
 
 # 删除多个配置文件中的go env涉及的环境变量
@@ -373,6 +374,8 @@ EOF
 
 git add .vscode/preview.yml
 git commit -m w2011_wmtemp_by_y72_p11_change_vscode_preview_file_content_函数
+
+[[ -f $(which cloudstudio) ]] && [[ -f workspace.yml ]] && cloudstudio .vscode/preview.yml
 
 }
 
