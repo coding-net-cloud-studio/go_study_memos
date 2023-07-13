@@ -32,18 +32,19 @@
 
 # 后端的如下目录
 server/dist
+!.air/
 !.air/memos_dev.db
+.air/memos
+.air/*.md
 
-# Air (hot reload) generated
-.air/
+# 前端的如下
+web/package-lock.json
 
 # temp folder
 tmp
 
 # Frontend asset
 web/dist
-
-
 
 # build folder
 build
