@@ -3,9 +3,15 @@
 default:help
 
 help:
+	@echo "\n"
 	@echo -e "\033[33m 使用帮助: \033[0m"
+	@echo "\n"
+	@echo -e "\033[33m 在中国数百万的程序员都有了自己的家庭与子女 \033[0m"
+	@echo -e "\033[33m Memos很适合数百万程序员的妻子,给她们的孩子制作\"时光都去了哪儿了!\" 图片格式,家庭视觉日记: \033[0m"
+	@echo "\n"
 	@echo "特别提示: 先输入make 再选择数字 接着按键盘左上角的Tab键 可以自动完成输入"
 	@echo "\t  --这样的方式对于初学者最为简洁^_&"
+	@echo "\t  --资深程序员请忽略本方式"
 	@echo "\n"
 	@echo "make 1_check                                   : 判断是否处于cloudstudio工作空间中"
 	@echo "make 2_init                                    : 本目标只是在cloudstudio工作空间中运行_只需要运行1次就可以了"
