@@ -1,11 +1,18 @@
 {
   "$schema": "https://aka.ms/codetour-schema",
-  "title": "test",
+  "title": "3_在cloudstudio中构建与运行Memos",
   "steps": [
     {
       "file": "3_development_tour.md",
-      "description": "diyibu",
-      "line": 8
+      "title": "a1_01_判断是否处于cloudstudio工作空间中",
+      "description": "TODO a1_01_判断是否处于cloudstudio工作空间中 \n\n 点击下面的命令_去执行 \n\n>> make 1_check",
+      "pattern": "^[^\\S\\n]*# TODO a1_01_判断是否处于cloudstudio工作空间中"
+    },
+    {
+      "file": "3_development_tour.md",
+      "title": "a1_02_初始化cloudstudio工作空间",
+      "description": "TODO a1_02_初始化cloudstudio工作空间 \n\n 点击下面的命令_去执行 \n\n>> make 2_init",
+      "pattern": "^[^\\S\\n]*# TODO a1_02_初始化cloudstudio工作空间"
     }
   ]
 }

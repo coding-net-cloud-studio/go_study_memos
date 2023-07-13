@@ -2,12 +2,40 @@
 
 ## 步骤
 
-a1.
+### a1_memos_cloudstudio工作空间_初始化
 
    ```bash
+   # TODO a1_01_判断是否处于cloudstudio工作空间中
+   [[ -f workspace.yml ]] && make 1_check
+   ```
+
+   ```bash
+   # TODO a1_02_初始化cloudstudio工作空间
+   # 在cloudstudio工作空间中运行_只需要运行1次就可以了
+   [[ -f workspace.yml ]] && make 2_init
+   ```
+
+   ```bash
+   # TODO a1_03_设置自己的vscode扩展自定义组合
+   [[ -f workspace.yml ]] && make 3_在cloudstudio中_安装_vscode扩展
+   ```
+
+   ```bash
+   # TODO a1_04_安装几个go语言编写的小工具
+   # 安装几个go语言编写的小工具_包括_处理markdown的工具
+   [[ -f workspace.yml ]] && make 4_在cloudstudio中_安装_go语言_小工具
+   ```
+
+   ```bash
+   # TODO a1_a1_概览老师主要修改了哪些文件
+   [[ -f workspace.yml ]] && make a1_memos_概览老师主要修改了哪些文件
+   ```
+
+<!-- REVIEW 下面的准备删除 -->
+   <!-- ```bash
    # TODO a1_09_概览_老师_重点_修改了哪些文件
    [[ -f workspace.yml ]] && grep -r -H wmtag_memo_教学 | grep NOTE
-   ```
+   ``` -->
 
 ### b2_memos_构建_与_使用air启动memos
 - 在修改go语言编写的后端的时候,可以自动重载_liveload
@@ -90,4 +118,3 @@ a1.
    # TODO d4_11_尝试停止docker-compose启动容器
    [[ -f workspace.yml ]] && docker-compose down
    ```
-

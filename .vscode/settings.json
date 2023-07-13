@@ -82,4 +82,7 @@
 	"bookmarks.saveBookmarksInProject": true,
 	"bookmarks.sideBar.expanded": true,
 	"bookmarks.useWorkaroundForFormatters": true,
+	"codetour.recordMode": "pattern",
+	"codetour.showMarkers": true,
+	"codetour.promptForWorkspaceTours": true
 }
