@@ -101,7 +101,8 @@ k9_memos_stop_all:
 p11_开启_cloudstudio自动运行预览:
 	@echo -e "$$(pwd)/Makefile wmtask_[p11_开启_cloudstudio自动运行预览]_目标_被运行\n"
 	@bash 1_wmscript_init_this.sh y72_p11_change_vscode_preview_file_content 2nd参数 3rd参数 || exit 0
-	-@cloudstudio .tours/a96_20_snapshot.png
+	-@cloudstudio .tours/a96_20_snapshot.png &
+	-@make help
 
 # -----------------------------------------------------------------------
 .PHONY : p14_关闭_cloudstudio自动运行预览

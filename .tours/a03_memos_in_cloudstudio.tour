@@ -57,7 +57,7 @@
     {
       "file": "3_development_tour.md",
       "title": "p11_开启_cloudstudio自动运行预览",
-      "description": "TODO p11_开启_cloudstudio自动运行预览 \n\n ![我们一起Go](.tours/a96_20_38_csdn_中国飞天.png) \n\n 点击下面的命令_去执行 \n\n>> make p11_开启_cloudstudio自动运行预览 && make help",
+      "description": "TODO p11_开启_cloudstudio自动运行预览 \n\n ![我们一起Go](.tours/a96_20_38_csdn_中国飞天.png) \n\n 点击下面的命令_去执行 \n\n>> make p11_开启_cloudstudio自动运行预览",
       "pattern": "^[^\\S\\n]*# TODO p11_开启_cloudstudio自动运行预览"
     }
     

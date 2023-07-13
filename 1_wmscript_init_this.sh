@@ -296,7 +296,9 @@ y30_b2_09_memos_setup(){
 # b2_11_此时应该位于本git仓库的顶层目录下_类似_绝对目录为_/root/RemoteWorking/22.wmsrc_memos 或 /workspace/22.wmsrc_memos
 # b2_16_缺省的后台服务端口是_8081
 y32_b2_15_start_memos_with_air_liveload(){
-	[[ -f workspace.yml ]] && air -c scripts/.air.toml
+	if [[ -f workspace.yml ]]; then 
+	 	air -c scripts/.air.toml &
+	 fi 
 	return 0
 }
 
