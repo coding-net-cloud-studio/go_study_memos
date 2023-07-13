@@ -262,7 +262,8 @@ f82_main(){
 	# 不论是位于cloudstudio都执行下面的操作
 	# 由于某些文件会产生变化_我们创造一个新的本地分支
 	# 例如: data/config/application.yml
-	git checkout -b wmstudy_wmlocal
+	# git checkout -b wmstudy_wmlocal
+	# git switch wmstudy_wmlocal
 
 	return 0
 
