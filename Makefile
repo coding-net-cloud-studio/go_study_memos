@@ -101,3 +101,8 @@ p11_开启_cloudstudio自动运行预览:
 	@echo -e "$$(pwd)/Makefile wmtask_[p11_开启_cloudstudio自动运行预览]_目标_被运行\n"
 	@bash 1_wmscript_init_this.sh y72_p11_change_vscode_preview_file_content 2nd参数 3rd参数 || exit 0
 
+# -----------------------------------------------------------------------
+.PHONY : p14_关闭_cloudstudio自动运行预览
+p14_关闭_cloudstudio自动运行预览:
+	@echo -e "$$(pwd)/Makefile wmtask_[p14_关闭_cloudstudio自动运行预览]_目标_被运行\n"
+	@bash 1_wmscript_init_this.sh y74_p14_change_vscode_preview_file_content_as_original 2nd参数 3rd参数 || exit 0
