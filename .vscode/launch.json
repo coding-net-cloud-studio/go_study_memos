@@ -7,10 +7,11 @@
             "request": "launch",
             "mode": "debug",
             //当运行单个文件时{workspaceFolder}可改为{file}
-            "program": "${file}",
+            // "program": "${file}",
+            "program": ".air/memos",
             "env": {},
             "args": [],
-            "cwd": "${fileDirname}",
+            "cwd": "${workspaceFolder}/.air",
             "console": "integratedTerminal"
         }
     ]
