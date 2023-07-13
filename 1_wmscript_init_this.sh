@@ -358,7 +358,7 @@ y72_p11_change_vscode_preview_file_content(){
 
 	(
 	cat <<'EOF'
-{
+# 这个是生成的_由如下函数_y72_p11_change_vscode_preview_file_content
 autoOpen: true
 apps:
   - port: 5000
@@ -368,7 +368,6 @@ apps:
     # 我们在后继的讲解中_需要用到_机械工业出版社_2022年01月出版的_廖显东老师_这本书中部分内容
     description: cloud_studio_go学习_廖显东_老师_goAdvanced_书籍介绍_启动_公告板
     autoOpen: true
-}
 EOF
 	) > ${CS_VSCODE_SETTINGS_BROWSER_PREVIEW}
 
