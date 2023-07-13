@@ -98,7 +98,7 @@ func setTokenCookie(c echo.Context, name, token string, expiration time.Time) {
 	cookie.Path = "/"
 	// Http-only helps mitigate the risk of client side script accessing the protected cookie.
 	cookie.HttpOnly = true
-	// NOTE wmtag_memo_这里是我变更的_修改_开始
+	// NOTE wmtag_memo_教学_这里是我变更的_修改_开始
 	// find . -name "*.go" -exec grep -H -r cookie {} \;
 	// 解决iframe嵌套项目无法登录的问题
 	// https://juejin.cn/post/6949881366628532237
@@ -108,7 +108,7 @@ func setTokenCookie(c echo.Context, name, token string, expiration time.Time) {
 	// cookie.SameSite = http.SameSiteStrictMode
 	cookie.SameSite = http.SameSiteNoneMode
 	cookie.Secure = true
-	// NOTE wmtag_memo_这里是我变更的_修改_结束
+	// NOTE wmtag_memo_教学_这里是我变更的_修改_结束
 	c.SetCookie(cookie)
 }
 

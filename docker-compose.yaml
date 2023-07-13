@@ -3,7 +3,9 @@ services:
   memos:
     image: neosmemo/memos:latest
     container_name: m32_cloudstudio_memos
+    # wmtag_memo_教学_下面的docker卷_被老师给取消掉了
     # volumes:
     #   - ~/.memos/:/var/opt/memos
+    # NOTE wmtag_memo_教学_端口号定义在这里_向外暴露8228端口_内部是8118端口
     ports:
       - 8228:8118

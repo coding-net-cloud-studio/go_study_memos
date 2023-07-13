@@ -2,6 +2,13 @@
 
 ## 步骤
 
+a1. 
+
+   ```bash
+   # TODO a1_09_概览_老师_重点_修改了哪些文件
+   [[ -f workspace.yml ]] && grep -r -H wmtag_memo_教学 | grep NOTE 
+   ```
+
 b2. 使用air启动memos后端(在修改go语言编写的后端的时候,可以自动重载_liveload)
 
    ```bash
@@ -80,3 +87,4 @@ d4. 尝试构建docker镜像
    # TODO d4_11_尝试停止docker-compose启动容器
    [[ -f workspace.yml ]] && docker-compose down
    ```
+
