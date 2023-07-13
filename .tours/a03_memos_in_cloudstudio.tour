@@ -13,6 +13,31 @@
       "title": "a1_02_初始化cloudstudio工作空间",
       "description": "TODO a1_02_初始化cloudstudio工作空间 \n\n 点击下面的命令_去执行 \n\n>> make 2_init",
       "pattern": "^[^\\S\\n]*# TODO a1_02_初始化cloudstudio工作空间"
+    },
+    {
+      "file": "3_development_tour.md",
+      "title": "a1_03_设置自己的vscode扩展自定义组合",
+      "description": "TODO a1_03_设置自己的vscode扩展自定义组合 \n\n 点击下面的命令_去执行 \n\n>> make 3_在cloudstudio中_安装_vscode扩展",
+      "pattern": "^[^\\S\\n]*# TODO a1_03_设置自己的vscode扩展自定义组合"
+    },
+    {
+      "file": "3_development_tour.md",
+      "title": "a1_04_安装几个go语言编写的小工具",
+      "description": "TODO a1_04_安装几个go语言编写的小工具 \n\n 点击下面的命令_去执行 \n\n>> make 4_在cloudstudio中_安装_go语言_小工具",
+      "pattern": "^[^\\S\\n]*# TODO a1_04_安装几个go语言编写的小工具"
+    },
+    {
+      "file": "3_development_tour.md",
+      "title": "a1_a1_概览老师主要修改了哪些文件",
+      "description": "TODO a1_a1_概览老师主要修改了哪些文件 \n\n 点击下面的命令_去执行 \n\n>> make a1_memos_概览老师主要修改了哪些文件",
+      "pattern": "^[^\\S\\n]*# TODO a1_a1_概览老师主要修改了哪些文件"
+    },
+    {
+      "file": "Makefile",
+      "title": "b2_memos_构建_并_使用air启动memos",
+      "description": "TODO a1_a1_概览老师主要修改了哪些文件 \n\n 点击下面的命令_去执行 \n\n>> make a1_memos_概览老师主要修改了哪些文件",
+      "pattern": "^[^\\S\\n]*make b2_memos_构建_并_使用air启动memos*"
     }
+    
   ]
 }

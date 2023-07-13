@@ -127,7 +127,12 @@ f30_install_common_software(){
 		mysql-client \
 		redis-tools
 
-		# apt install -y ffmpeg
+	# apt install -y ffmpeg
+
+	# NOTE 这个air极其特殊_是必须安装的_所以再这里单独安装一次_确保_泛开发者_把某些步骤跳过了_而没有安装上
+	# air
+	# go使用Air实时热加载
+	GO111MODULE=auto GOPROXY=https://goproxy.cn,https://mirrors.tencent.com/go/,https://mirrors.aliyun.com/goproxy,https://proxy.golang.com.cn,direct go install github.com/cosmtrek/air@latest
 
 }
 
