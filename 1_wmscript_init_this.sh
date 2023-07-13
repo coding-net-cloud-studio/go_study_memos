@@ -195,7 +195,11 @@ f68_20_install_go_tools(){
 		# REVIEW 这个是库 Convert HTML to Markdown. Even works with entire websites and can be extended through rules.
 			# https://github.com/JohannesKaufmann/html-to-markdown.git
 
+	echo "\n\n"
+
 	ls ${GOPATH}/bin
+	
+	echo "\n\n"
 }
 
 # 删除多个配置文件中的go env涉及的环境变量
