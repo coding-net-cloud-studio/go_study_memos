@@ -36,6 +36,7 @@ server/dist
 !.air/memos_dev.db
 .air/memos
 .air/*.md
+.air/.thumbnail_cache/
 
 # 前端的如下
 web/package-lock.json
