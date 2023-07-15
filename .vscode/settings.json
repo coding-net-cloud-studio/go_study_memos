@@ -1,7 +1,19 @@
 {
+	"mediaPreview.video.autoPlay":true,
+	"search.useIgnoreFiles":true,
 	"editor.fontSize": 20,
 	"editor.mouseWheelZoom": true,
+	"terminal.integrated.experimentalImageSupport": true,
 	"terminal.integrated.fontSize": 18,
+	// "terminal.integrated.profiles.osx": {
+	// 	// This will override the builtin bash profile
+	// 	"bash": {
+	// 	  "path": "bash",
+	// 	  "args": ["-l"],
+	// 	  "icon": "terminal-bash"
+	// 	}
+	//   }
+	// },
 	"json.schemaDownload.enable":true,
 	"go.lintOnSave": "workspace",
 	"go.lintTool": "golangci-lint",
