@@ -36,7 +36,11 @@ f16_cs_vs_settings_user_update(){
 	"cloudstudio.autosleep": "no",
 	"go.toolsManagement.autoUpdate": true,
 	"redhat.telemetry.enabled": false,
-	"bookmarks.saveBookmarksInProject": true
+	"bookmarks.saveBookmarksInProject": true,
+	"Codegeex.Privacy": true,
+	"Codegeex.Survey": false,
+	"Codegeex.EnableExtension": false,
+	"CS.CodeAssistant.EnableExtension": false,
 }
 EOF
 	) > ${CS_VSCODE_SETTINGS_USER}
