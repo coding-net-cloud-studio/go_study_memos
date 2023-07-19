@@ -110,13 +110,19 @@ f27_38_install_some_vs_ext_quick(){
 
 #类似imgcat等小工具位于.wmstudy/bin的目录下
 f28_20_install_some_wmstudy_bin_tools(){
+	# pause_60_second
 	# 只有位于cloudstudio工作空间中才执行
 	if [[ -f $(which cloudstudio) ]]; then 
+		# pause_60_second
 		# 只有具有如下的目录才执行
 		if [[ -d .wmstudy/bin/ ]]; then 
+			# pause_60_second
 			chmod +x .wmstudy/bin/*
-			cp -r .wmstudy/bin /usr/bin
-			cp -r .wmstudy/bin /bin/
+			# ls -lah .wmstudy/bin/
+			cp -r .wmstudy/bin/* /usr/bin/
+			# ls -lah /usr/bin/imgcat
+			cp -r .wmstudy/bin/* /bin/
+			# ls -alh /bin/imgcat
 		fi 
 	fi 
 }
