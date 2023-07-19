@@ -108,6 +108,19 @@ f27_38_install_some_vs_ext_quick(){
 
 }
 
+#类似imgcat等小工具位于.wmstudy/bin的目录下
+f28_20_install_some_wmstudy_bin_tools(){
+	# 只有位于cloudstudio工作空间中才执行
+	if [[ -f $(which cloudstudio) ]]; then 
+		# 只有具有如下的目录才执行
+		if [[ -d .wmstudy/bin/ ]]; then 
+			chmod +x .wmstudy/bin/*
+			cp -r .wmstudy/bin /usr/bin
+			cp -r .wmstudy/bin /bin/
+		fi 
+	fi 
+}
+
 f30_install_common_software(){
 	apt update
 	apt install -y \
@@ -440,6 +453,8 @@ all(){
 	f16_cs_vs_settings_user_update
 
 	f20_linux_git_setting
+
+	f28_20_install_some_wmstudy_bin_tools
 
 	f30_install_common_software
 
