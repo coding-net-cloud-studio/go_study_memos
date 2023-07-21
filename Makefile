@@ -38,7 +38,7 @@ help:
 	@echo -e "\n"
 	@echo -e "make k9_memos_stop_all                         : 尝试停止所有被启动的服务_或_容器等"
 	@echo -e "\n"
-	@echo -e "make p11_开启_cloudstudio自动运行预览          : 开启_下一次启动本cloudstudio工作空间运行自动预览"
+	@echo -e "make p11_风里雨里_我们等你                     : 期待你的加入_风里雨里_等你_加入我们一起写技术博客的队伍_我们一起Go"
 	@echo -e "\n"
 	@echo -e "每个学员看到的网址都不一样_通过浏览器访问类似于 https://ohbott-buwkox-8081.preview.myide.io/ 的网址"
 	@echo -e "\033[33m ---使用默认账号(账号:root 密码: a123456)登录memos \033[0m"
@@ -106,10 +106,9 @@ k9_memos_stop_all:
 	@echo -e "\033[33m 执行本目标完毕,可以执行Next(下一步)目标 \033[0m\n"
 
 # -----------------------------------------------------------------------
-.PHONY : p11_开启_cloudstudio自动运行预览
-p11_开启_cloudstudio自动运行预览:
-	@echo -e "$$(pwd)/Makefile wmtask_[p11_开启_cloudstudio自动运行预览]_目标_被运行\n"
-	@bash 1_wmscript_init_this.sh y72_p11_change_vscode_preview_file_content 2nd参数 3rd参数 || exit 0
+.PHONY : p11_风里雨里_我们等你_欢迎加入写技术博客的队伍
+p11_风里雨里_我们等你_欢迎加入写技术博客的队伍:
+	@echo -e "$$(pwd)/Makefile wmtask_[p11_风里雨里_我们等你_欢迎加入写技术博客的队伍]_目标_被运行\n"
 	-@cloudstudio .tours/a96_20_snapshot.png &
 	@echo -e "\033[33m 执行本目标完毕,可以执行Next(下一步)目标 \033[0m\n"
 	-@make help
@@ -118,8 +117,3 @@ p11_开启_cloudstudio自动运行预览:
 	@echo -e "\033[33m 2023年09月进入大学的 小伙伴们 风里雨里 我们在CSDN技术博客 那里等你 \033[0m\n"
 
 # -----------------------------------------------------------------------
-.PHONY : p14_关闭_cloudstudio自动运行预览
-p14_关闭_cloudstudio自动运行预览:
-	@echo -e "$$(pwd)/Makefile wmtask_[p14_关闭_cloudstudio自动运行预览]_目标_被运行\n"
-	@bash 1_wmscript_init_this.sh y74_p14_change_vscode_preview_file_content_as_original 2nd参数 3rd参数 || exit 0
-	@echo -e "\033[33m 执行本目标完毕 \033[0m\n"
