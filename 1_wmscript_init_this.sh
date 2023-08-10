@@ -304,7 +304,16 @@ y26_b2_06_stop_all_memos_server(){
 # NOTE 被y36_b2_memos_build_and_start_with_livecode_by_air()函数所调用
 # b2_07_构建后端的go代码_并且放入到./.air/目录下
 y28_b2_07_go_build_backend_and_copy_it_to_target_directory(){
-	[[ -f workspace.yml ]] && [[ -f ./.air/memos ]] && rm -f ./.air/memos && go build -o ./.air/memos ./main.go && touch ./.air/07_go_build_memos_构建时间_$(date '+%Y-%m-%d日_%H:%M:%S秒').md && ls -lah ./.air
+
+	if [[ -f workspace.yml ]]; then
+		# 如果已经存在构建的目标_先删除原有的较老的可执行文件版本
+		if [[ -f ./.air/memos ]]; then
+			rm -f ./.air/memos
+		fi
+		# 再构建
+		go build -o ./.air/memos ./main.go && touch ./.air/07_go_build_memos_构建时间_$(date '+%Y-%m-%d日_%H:%M:%S秒').md && ls -lah ./.air
+	fi
+
 	return 0
 }
 

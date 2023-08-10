@@ -57,7 +57,8 @@
 
    ```bash
    # TODO b2_07_构建后端的go代码_并且放入到./.air/目录下
-   [[ -f workspace.yml ]] && [[ -f ./.air/memos ]] && rm -f ./.air/memos && go build -x -v -o ./.air/memos ./main.go && touch ./.air/07_go_build_memos_构建时间_$(date '+%Y-%m-%d日_%H:%M:%S秒').md && ls -lah ./.air
+   [[ -f workspace.yml ]] && [[ -f ./.air/memos ]] && rm -f ./.air/memos 
+   [[ -f workspace.yml ]] && go build -x -v -o ./.air/memos ./main.go && touch ./.air/07_go_build_memos_构建时间_$(date '+%Y-%m-%d日_%H:%M:%S秒').md && ls -lah ./.air
    ```
 
    ```bash
