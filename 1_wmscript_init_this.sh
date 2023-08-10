@@ -335,7 +335,7 @@ y36_b2_memos_build_and_start_with_livecode_by_air(){
 	# echo "$TODO_啥都不做_就是一个占位_保证构建通过"
 
 	# b2_01_先构建_前端_生成前端的目标文件夹
-	# y20_b2_01_npm_build_frontend
+	y20_b2_01_npm_build_frontend
 
 	# b2_02_把上面构建好的_前端目标文件夹_拷贝一份到_后端的./server/dist目录下
 	# 03_将覆盖./server/dist中原有内容
