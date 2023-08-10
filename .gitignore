@@ -45,7 +45,7 @@ web/package-lock.json
 tmp
 
 # Frontend asset
-web/dist
+# web/dist
 
 # build folder
 build
