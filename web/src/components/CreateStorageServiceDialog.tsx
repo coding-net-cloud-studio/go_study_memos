@@ -112,7 +112,7 @@ const CreateStorageServiceDialog: React.FC<Props> = (props: Props) => {
         </button>
       </div>
       <div className="dialog-content-container min-w-[19rem]">
-        <Typography className="!mb-1" level="body2">
+        <Typography className="!mb-1" level="body-md">
           {t("common.name")}
           <RequiredBadge />
         </Typography>
@@ -128,7 +128,7 @@ const CreateStorageServiceDialog: React.FC<Props> = (props: Props) => {
           }
           fullWidth
         />
-        <Typography className="!mb-1" level="body2">
+        <Typography className="!mb-1" level="body-md">
           {t("setting.storage-section.endpoint")}
           <RequiredBadge />
         </Typography>
@@ -139,7 +139,7 @@ const CreateStorageServiceDialog: React.FC<Props> = (props: Props) => {
           onChange={(e) => setPartialS3Config({ endPoint: e.target.value })}
           fullWidth
         />
-        <Typography className="!mb-1" level="body2">
+        <Typography className="!mb-1" level="body-md">
           {t("setting.storage-section.region")}
           <RequiredBadge />
         </Typography>
@@ -150,7 +150,7 @@ const CreateStorageServiceDialog: React.FC<Props> = (props: Props) => {
           onChange={(e) => setPartialS3Config({ region: e.target.value })}
           fullWidth
         />
-        <Typography className="!mb-1" level="body2">
+        <Typography className="!mb-1" level="body-md">
           {t("setting.storage-section.accesskey")}
           <RequiredBadge />
         </Typography>
@@ -161,7 +161,7 @@ const CreateStorageServiceDialog: React.FC<Props> = (props: Props) => {
           onChange={(e) => setPartialS3Config({ accessKey: e.target.value })}
           fullWidth
         />
-        <Typography className="!mb-1" level="body2">
+        <Typography className="!mb-1" level="body-md">
           {t("setting.storage-section.secretkey")}
           <RequiredBadge />
         </Typography>
@@ -172,7 +172,7 @@ const CreateStorageServiceDialog: React.FC<Props> = (props: Props) => {
           onChange={(e) => setPartialS3Config({ secretKey: e.target.value })}
           fullWidth
         />
-        <Typography className="!mb-1" level="body2">
+        <Typography className="!mb-1" level="body-md">
           {t("setting.storage-section.bucket")}
           <RequiredBadge />
         </Typography>
@@ -184,7 +184,7 @@ const CreateStorageServiceDialog: React.FC<Props> = (props: Props) => {
           fullWidth
         />
         <div className="flex flex-row items-center mb-1">
-          <Typography level="body2">{t("setting.storage-section.path")}</Typography>
+          <Typography level="body-md">{t("setting.storage-section.path")}</Typography>
           <LearnMore className="ml-1" title={t("setting.storage-section.path-description")} url="https://usememos.com/docs/local-storage" />
         </div>
         <Input
@@ -194,7 +194,7 @@ const CreateStorageServiceDialog: React.FC<Props> = (props: Props) => {
           onChange={(e) => setPartialS3Config({ path: e.target.value })}
           fullWidth
         />
-        <Typography className="!mb-1" level="body2">
+        <Typography className="!mb-1" level="body-md">
           {t("setting.storage-section.url-prefix")}
         </Typography>
         <Input
@@ -204,7 +204,7 @@ const CreateStorageServiceDialog: React.FC<Props> = (props: Props) => {
           onChange={(e) => setPartialS3Config({ urlPrefix: e.target.value })}
           fullWidth
         />
-        <Typography className="!mb-1" level="body2">
+        <Typography className="!mb-1" level="body-md">
           {t("setting.storage-section.url-suffix")}
         </Typography>
         <Input
