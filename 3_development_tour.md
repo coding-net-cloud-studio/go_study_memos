@@ -120,8 +120,14 @@
    [[ -f workspace.yml ]] && docker-compose down
    ```
 
-### p11_开启_cloudstudio自动运行预览
+### p11_风里雨里_我们等你
    ```bash
-   # TODO p11_开启_cloudstudio自动运行预览
-   [[ -f workspace.yml ]] && make p11_开启_cloudstudio自动运行预览
+   # TODO p11_风里雨里_我们等你
+   [[ -f workspace.yml ]] && make p11_风里雨里_我们等你
+   ```
+
+### p12_开启_cloudstudio自动运行预览
+   ```bash
+   # TODO p12_开启_cloudstudio自动运行预览
+   [[ -f workspace.yml ]] && make p12_开启_cloudstudio自动运行预览
    ```

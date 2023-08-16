@@ -385,6 +385,70 @@ y66_k9_memos_stop_all(){
 	return 0
 }
 
+# make p11_开启_cloudstudio自动运行预览
+y72_p11_change_vscode_preview_file_content(){
+	# echo "$TODO_啥都不做_就是一个占位_保证构建通过"
+
+	# NOTE 方法就是把内容暴力写入.vscode/preview.yml中
+	# cloud studio中vscode_browser_preview设置文件
+	CS_VSCODE_SETTINGS_BROWSER_PREVIEW=./.vscode/preview.yml
+	# -----------------------------------------------------------
+	# '嵌入文档涵盖了生成脚本的主体部分.
+
+	(
+	cat <<'EOF'
+# 这个是生成的_由如下函数_y72_p11_change_vscode_preview_file_content
+autoOpen: true
+apps:
+  - port: 5000
+    run: pip3 install -i https://mirrors.tencent.com/pypi/simple/ -r ./.wmstudy/wm28.preview/web/requirements.txt && python3 ./.wmstudy/wm28.preview/web/app.py
+    root: .
+    name: 我们一起Go_公告板
+    # 我们在后继的讲解中_需要用到_机械工业出版社_2022年01月出版的_廖显东老师_这本书中部分内容
+    description: cloud_studio_go学习_廖显东_老师_goAdvanced_书籍介绍_启动_公告板
+    autoOpen: true
+EOF
+	) > ${CS_VSCODE_SETTINGS_BROWSER_PREVIEW}
+
+git add .vscode/preview.yml
+git commit -m w2011_wmtemp_by_y72_p11_change_vscode_preview_file_content_函数
+
+[[ -f $(which cloudstudio) ]] && [[ -f workspace.yml ]] && cloudstudio .vscode/preview.yml
+
+}
+
+# make p14_关闭_cloudstudio自动运行预览
+y74_p14_change_vscode_preview_file_content_as_original(){
+	# echo "$TODO_啥都不做_就是一个占位_保证构建通过"
+
+	# NOTE 方法就是把内容暴力写入.vscode/preview.yml中
+	# NOTE 把接近原始的内容给写入了
+	# cloud studio中vscode_browser_preview设置文件
+	CS_VSCODE_SETTINGS_BROWSER_PREVIEW=./.vscode/preview.yml
+	# -----------------------------------------------------------
+	# '嵌入文档涵盖了生成脚本的主体部分.
+
+	(
+	cat <<'EOF'
+# 这个是生成的_由如下函数_y74_p11_change_vscode_preview_file_content_as_origina
+# autoOpen: true
+# apps:
+#   - port: 5000
+#     run: make help
+#     # run: pip3 install -i https://mirrors.tencent.com/pypi/simple/ -r ./.wmstudy/wm28.preview/web/requirements.txt && python3 ./.wmstudy/wm28.preview/web/app.py
+#     root: .
+#     name: 我们一起Go_公告板
+#     # 我们在后继的讲解中_需要用到_机械工业出版社_2022年01月出版的_廖显东老师_这本书中部分内容
+#     description: cloud_studio_go学习_廖显东_老师_goAdvanced_书籍介绍_启动_公告板
+#     autoOpen: true
+EOF
+	) > ${CS_VSCODE_SETTINGS_BROWSER_PREVIEW}
+
+git add .vscode/preview.yml
+git commit -m w2014_wmtemp_by_y74_p14_change_vscode_preview_file_content_as_original_函数
+
+}
+
 # ======================================================================================
 
 
