@@ -6,9 +6,9 @@
 - <font color="#dddd00">Memos很适合数百万程序员的妻子,给她们的孩子制作\"时光都去了哪儿了!\" 图片格式,家庭视觉日记</font><br /> 
 - <font color="#dddd00">所有的程序员都是从初学者中的初学者成长起来的_本教程仅仅局限于_给初学者中的初学者</font><br /> 
 
-赶考（个人）分享了「v38_cloudstudio_memos」模版 https://cloudstudio.net/templates/rCq5orfE7pV
+赶考（个人）分享了「v39_cloudstudio_memos」模版 https://cloudstudio.net/templates/rCqR7g1Fu9V
 
-[![Cloud Studio Template](https://cs-res.codehub.cn/common/assets/icon-badge.svg)](https://cloudstudio.net/templates/rCq5orfE7pV)
+[![Cloud Studio Template](https://cs-res.codehub.cn/common/assets/icon-badge.svg)](https://cloudstudio.net/templates/rCqR7g1Fu9V)
 
 
 <img height="72px" src="https://usememos.com/logo.webp" alt="✍️ memos" align="right" />
