@@ -4,7 +4,7 @@
 <br/>
 <font color="#dddd00" size="4">然后跟着导航一步一步的顺序执行下去</font><br /> 
 
-[本仓库博客地址](https://gitcode.net/weixin_44128887/go_study_memos/-/blob/wmstudy/tinyblog/cloudstudio%E7%9A%84%E5%8D%9A%E5%AE%A2.md)
+[立即点击我,这里是本仓库博客地址](https://gitcode.net/weixin_44128887/go_study_memos/-/blob/wmstudy/tinyblog/cloudstudio%E7%9A%84%E5%8D%9A%E5%AE%A2.md)
 
 # <font color="#dddd00" size="6">我们一起Go</font><br /> 
 
