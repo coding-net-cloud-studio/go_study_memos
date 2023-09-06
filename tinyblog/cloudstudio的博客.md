@@ -189,3 +189,6 @@ ENTRYPOINT ["./memos"]
 
 - Memos仓库地址
   - [memos 仓库地址](https://github.com/usememos/memos)
+
+- 本仓库在gitcode.net的地址如下
+  - [本仓库在gitcode的地址](https://gitcode.net/weixin_44128887/go_study_memos.git)
