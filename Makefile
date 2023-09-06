@@ -113,6 +113,7 @@ k9_memos_stop_all:
 p11_风里雨里_我们等你:
 	@echo -e "$$(pwd)/Makefile wmtask_[p11_风里雨里_我们等你]_目标_被运行\n"
 	-@cloudstudio .tours/a96_20_snapshot.png &
+	-@cloudstudio .tours/d22_wechatgroup_code.png &
 	@echo -e "\033[33m 执行本目标完毕,可以执行Next(下一步)目标 \033[0m\n"
 	-@make help
 	@echo -e "\033[33m 执行本目标完毕 \033[0m\n"
