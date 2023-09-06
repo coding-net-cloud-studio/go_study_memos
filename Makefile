@@ -52,11 +52,14 @@ help:
 1_check:
 	@echo -e "$$(pwd)/Makefile wmtask_[1_check]_目标_被运行\n"
 	@if [ $$(which cloudstudio) ]; then \
-		echo "位于cloudstudio工作空间中"; \
+		echo "位于cloudstudio工作空间中,可以扫描如下微信二维码加入技术群"; \
+		curl https://gitcode.net/weixin_44128887/go_study_memos/-/raw/wmstudy/.tours/d22_wechatgroup_code.png -o .tours/d22_wechatgroup_code.png ; \
+		.wmstudy/bin/imgcat .tours/d22_wechatgroup_code.png ; \
 	else \
 		echo "没有处于cloudstudio工作空间中"; \
 	fi
 	@echo -e "\033[33m 执行本目标完毕,可以执行Next(下一步)目标 \033[0m\n"
+	@exit 0
 
 
 # -----------------------------------------------------------------------
