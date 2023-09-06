@@ -18,7 +18,7 @@ A lightweight, self-hosted memo hub. Open Source and Free forever.
 
 [本教程是针对泛开发者_这里有本教程适用人群的_说明](./Makefile)
 
-![cloudstudio爱好者技术微信群](./.tours/d22_wechatgroup_code.png)
+![cloudstudio爱好者技术微信群](.tours/d22_wechatgroup_code.png)
 
 <!-- 下面是在线编辑图片 -->
 <!-- https://www.iloveimg.com/zh-cn/photo-editor -->
