@@ -62,9 +62,10 @@
 
 这是我制作好的cloudstudio工作空间模板,想尝试的小伙伴们,直接点击下面的勋章就可以了!
 
-赶考（个人）分享了「v39_cloudstudio_memos」模版 https://cloudstudio.net/templates/rCqR7g1Fu9V
+赶考（个人）分享了「v40_cloudstudio_memos」模版 https://cloudstudio.net/templates/rCEoobm1v7k
 
-[![Cloud Studio Template](https://cs-res.codehub.cn/common/assets/icon-badge.svg)](https://cloudstudio.net/templates/rCqR7g1Fu9V)
+[![Cloud Studio Template](https://cs-res.codehub.cn/common/assets/icon-badge.svg)](https://cloudstudio.net/templates/rCEoobm1v7k)
+
 
 <br/>
 <br/>
