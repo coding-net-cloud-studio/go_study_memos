@@ -101,6 +101,16 @@ f27_38_install_some_vs_ext_quick(){
 	# NOTE 下面是强制删除某些vscode的扩展
 	[[ -f $(which cloudstudio) ]] && cloudstudio --uninstall-extension muhammad-sammy.csharp             --force
 
+	# NOTE 下面是应对cloudstudio最近把all in one工作空间中所有的vscode扩展都删掉带来的问题_增加的部分
+	[[ -f $(which cloudstudio) ]] && cloudstudio --install-extension  ms-python.python   					--force
+
+	[[ -f $(which cloudstudio) ]] && cloudstudio --install-extension  ms-toolsai.jupyter   					--force
+	[[ -f $(which cloudstudio) ]] && cloudstudio --install-extension  ms-toolsai.jupyter-keymap   			--force
+	[[ -f $(which cloudstudio) ]] && cloudstudio --install-extension  ms-toolsai.jupyter-renderers   		--force
+	[[ -f $(which cloudstudio) ]] && cloudstudio --install-extension  ms-toolsai.vscode-jupyter-cell-tags   --force
+	[[ -f $(which cloudstudio) ]] && cloudstudio --install-extension  ms-toolsai.vscode-jupyter-slideshow   --force
+
+
 }
 
 #类似imgcat等小工具位于.wmstudy/bin的目录下
