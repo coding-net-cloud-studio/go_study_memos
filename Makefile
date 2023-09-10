@@ -129,7 +129,7 @@ p11_风里雨里_我们等你:
 start : w45_just_start_memos
 
 .PHONY : w45_just_start_memos
-w45_just_start_memos:
+w45_just_start_memos: 1_check
 	@echo -e "$$(pwd)/Makefile wmtask_[w45_just_start_memos]_目标_被运行\n"
 	-@cp .vscode/preview.example.yml .vscode/preview.yml
 	-@./.air/w45_memos_start --mode dev
