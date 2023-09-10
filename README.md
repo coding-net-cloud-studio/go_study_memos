@@ -1,4 +1,10 @@
-# Memos 
+# Memos 脉陌笔记
+
+<font color="#dddd00" size="4">欢迎来到Memos脉陌心理与视觉笔记的世界: 第01篇博客文章如下</font><br /> 
+
+[【腾讯云 Cloud Studio 实战训练营】AIGC chatGPT 恋爱与撒狗粮专业研究生_ 贝加尔阿楠与俄罗斯女友小嗒莎，在西伯利亚的，贝加尔湖畔结婚了](https://blog.csdn.net/weixin_44128887/article/details/132775559)
+
+## 开发者按照如下进行
 
 <font color="#dddd00" size="4">最重要的第1步:在cloudstudio中接受安装vscode扩展的建议</font><br /> 
 <br/>
