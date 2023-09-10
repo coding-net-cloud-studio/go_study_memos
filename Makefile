@@ -121,3 +121,18 @@ p11_风里雨里_我们等你:
 	@echo -e "\033[33m 2023年09月进入大学的 小伙伴们 风里雨里 我们在CSDN技术博客 那里等你 \033[0m\n"
 
 # -----------------------------------------------------------------------
+# 下面是为了在clud.cloudstudio.net中通过make start这样最简单的方式起来起来
+# 不进行任何构建
+# 而是使用已经构建完成的w45_memos_start可执行文件
+.PHONY : start
+# start是w45_just_start_memos的别名
+start : w45_just_start_memos
+
+.PHONY : w45_just_start_memos
+w45_just_start_memos:
+	@echo -e "$$(pwd)/Makefile wmtask_[w45_just_start_memos]_目标_被运行\n"
+	-@cp .vscode/preview.example.yml .vscode/preview.yml
+	-@./.air/w45_memos_start --mode dev
+	@echo -e "\033[33m 执行本目标完毕 \033[0m\n"
+	
+# -----------------------------------------------------------------------
