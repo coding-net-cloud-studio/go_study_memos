@@ -193,3 +193,8 @@ ENTRYPOINT ["./memos"]
 
 - 本仓库在gitcode.net的地址如下
   - [本仓库在gitcode的地址](https://gitcode.net/weixin_44128887/go_study_memos.git)
+
+- 本仓库在club.cloudstudio.net中的快速地址如下
+  - [在club.cloudstudio.net的地址](https://club.cloudstudio.net/247067/12798310552211456)
+
+[![Cloud Studio Template](https://cs-res.codehub.cn/common/assets/icon-badge.svg)](https://club.cloudstudio.net/247067/12798310552211456)
