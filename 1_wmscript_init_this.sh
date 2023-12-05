@@ -33,13 +33,23 @@ f16_cs_vs_settings_user_update(){
 	(
 	cat <<'EOF'
 {
+	"update.mode": "none",
+	"update.showReleaseNotes": false,
 	"cloudstudio.autosleep": "no",
-	"go.toolsManagement.autoUpdate": true,
 	"redhat.telemetry.enabled": false,
 	"bookmarks.saveBookmarksInProject": true,
+	"Codegeex.Privacy": true,
+	"Codegeex.EnableExtension": false,
+	"Codegeex.Comment.LanguagePreference": "中文",
+	"Codegeex.Explanation.LanguagePreference": "中文",
 }
 EOF
 	) > ${CS_VSCODE_SETTINGS_USER}
+
+	# 可能有用的设置_暂时被取消了
+	# "Codegeex.Survey": false,
+	# "CS.CodeAssistant.EnableExtension": false,
+	# "go.toolsManagement.autoUpdate": true,
 
 }
 
