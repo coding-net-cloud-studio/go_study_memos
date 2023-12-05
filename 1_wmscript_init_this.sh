@@ -89,7 +89,7 @@ f27_38_install_some_vs_ext_quick(){
 	[[ -f $(which cloudstudio) ]] && cloudstudio --install-extension  alefragnani.Bookmarks             --force
 	[[ -f $(which cloudstudio) ]] && cloudstudio --install-extension  ExodiusStudios.comment-anchors    --force
 	# [[ -f $(which cloudstudio) ]] && cloudstudio --install-extension  ritwickdey.LiveServer             --force
-	[[ -f $(which cloudstudio) ]] && cloudstudio --install-extension  ms-azuretools.vscode-docker       --force
+	# [[ -f $(which cloudstudio) ]] && cloudstudio --install-extension  ms-azuretools.vscode-docker       --force
 	# [[ -f $(which cloudstudio) ]] && cloudstudio --install-extension  cweijan.vscode-office             --force
 	# [[ -f $(which cloudstudio) ]] && cloudstudio --install-extension  arcanis.vscode-zipfs              --force
 	# [[ -f $(which cloudstudio) ]] && cloudstudio --install-extension  mads-hartmann.bash-ide-vscode     --force
@@ -109,10 +109,13 @@ f27_38_install_some_vs_ext_quick(){
 	# [[ -f $(which cloudstudio) ]] && cloudstudio --install-extension  mkhl.direnv                       --force
 
 	# NOTE 下面是强制删除某些vscode的扩展
-	[[ -f $(which cloudstudio) ]] && cloudstudio --uninstall-extension muhammad-sammy.csharp             --force
+	# 2023_12_05_0030-不需要删除了_all_in_one工作空间中_没有缺省携带任何的vscode_扩展
+	# [[ -f $(which cloudstudio) ]] && cloudstudio --uninstall-extension muhammad-sammy.csharp             --force
 
 	# NOTE 下面是应对cloudstudio最近把all in one工作空间中所有的vscode扩展都删掉带来的问题_增加的部分
-	[[ -f $(which cloudstudio) ]] && cloudstudio --install-extension  ms-python.python   					--force
+	# 不用如下的模式_会出现出错
+	# 使用v22_vs_ext的项目中自带的那个_那个是没有问题的
+	# [[ -f $(which cloudstudio) ]] && cloudstudio --install-extension  ms-python.python   					--force
 
 	# 下面的来自openvsx社区的jupyter破裂了只能手工的安装
 	# [[ -f $(which cloudstudio) ]] && cloudstudio --install-extension  ms-toolsai.jupyter   					--force
@@ -130,20 +133,31 @@ f27_38_install_some_vs_ext_quick(){
 		wmvar26_20_code_runner_file_name=$(basename $(find .vscode/ -name '*buuug7.chinese-punctuation*.vsix'| sort -V | tail -n 2 | head -n 1))
 		# 判断是否是cloudstudio的环境
 		[[ -f $(which cloudstudio) ]] && cloudstudio --install-extension $(pwd)/.vscode/${wmvar26_20_code_runner_file_name} --force
-	else 
+	else
 		echo "没有找到随着本git仓库携带的_buuug7.chinese-punctuation_扩展"
-	fi 
+	fi
+
+	# 安装数据分析所用的python的vscode扩展_2023_12_05_0020_必须是支持cloudstudio_1_79_0版本的
+	# 位置大体类似 .vscode/k36_ms-python.python-2023.14.0.vsix
+	if [[ $(find .vscode/ -name '*ms-python.python*.vsix'| wc -l) -gt 0 ]]; then
+		# 提取出ms-toolsai.jupyter扩展的文件名称
+		wmvar26_20_code_runner_file_name=$(basename $(find .vscode/ -name '*ms-python.python*.vsix'| sort -V | tail -n 2 | head -n 1))
+		# 判断是否是cloudstudio的环境
+		[[ -f $(which cloudstudio) ]] && cloudstudio --install-extension $(pwd)/.vscode/${wmvar26_20_code_runner_file_name} --force
+	else
+		echo "没有找到随着本git仓库携带的_ms-python.python_扩展"
+	fi
 
 	# 安装数据分析所用的jupyter_notebook的vscode扩展
-	# 位置大体类似 .vscode/ext26_ms-toolsai.jupyter-2023.5.1101742258.vsix
+	# 位置大体类似 .vscode/k42_ms-toolsai.jupyter-2023.4.1001091014.vsix
 	if [[ $(find .vscode/ -name '*ms-toolsai.jupyter*.vsix'| wc -l) -gt 0 ]]; then
 		# 提取出ms-toolsai.jupyter扩展的文件名称
 		wmvar26_20_code_runner_file_name=$(basename $(find .vscode/ -name '*ms-toolsai.jupyter*.vsix'| sort -V | tail -n 2 | head -n 1))
 		# 判断是否是cloudstudio的环境
 		[[ -f $(which cloudstudio) ]] && cloudstudio --install-extension $(pwd)/.vscode/${wmvar26_20_code_runner_file_name} --force
-	else 
+	else
 		echo "没有找到随着本git仓库携带的_ms-toolsai.jupyter_扩展"
-	fi 
+	fi
 
 }
 
@@ -151,10 +165,10 @@ f27_38_install_some_vs_ext_quick(){
 f28_20_install_some_wmstudy_bin_tools(){
 	# pause_60_second
 	# 只有位于cloudstudio工作空间中才执行
-	if [[ -f $(which cloudstudio) ]]; then 
+	if [[ -f $(which cloudstudio) ]]; then
 		# pause_60_second
 		# 只有具有如下的目录才执行
-		if [[ -d .wmstudy/bin/ ]]; then 
+		if [[ -d .wmstudy/bin/ ]]; then
 			# pause_60_second
 			chmod +x .wmstudy/bin/*
 			# ls -lah .wmstudy/bin/
@@ -162,8 +176,8 @@ f28_20_install_some_wmstudy_bin_tools(){
 			# ls -lah /usr/bin/imgcat
 			cp -r .wmstudy/bin/* /bin/
 			# ls -alh /bin/imgcat
-		fi 
-	fi 
+		fi
+	fi
 }
 
 f30_install_common_software(){
@@ -371,9 +385,9 @@ y30_b2_09_memos_setup(){
 # b2_11_此时应该位于本git仓库的顶层目录下_类似_绝对目录为_/root/RemoteWorking/22.wmsrc_memos 或 /workspace/22.wmsrc_memos
 # b2_16_缺省的后台服务端口是_8081
 y32_b2_15_start_memos_with_air_liveload(){
-	if [[ -f workspace.yml ]]; then 
+	if [[ -f workspace.yml ]]; then
 	 	air -c scripts/.air.toml &
-	 fi 
+	 fi
 	return 0
 }
 
